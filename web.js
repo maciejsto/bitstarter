@@ -14,8 +14,9 @@ var readFile = function(file) {
 };
 
 app.get('/', function(request, response) {
-  var buflen = readFile.lenght;  
-  var buffer = new Buffer(buflen);
+ var buflen = readFile('/bitstarter/index.html');
+  var lennn = buflen.length;
+  var buffer = new Buffer(lenn);
   var str = buffer.toString('utf-8');
   //TODO 
   console.log(str);
@@ -25,10 +26,20 @@ app.get('/', function(request, response) {
   response.send(str);
 });
 
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
+    console.log(readFile('~/index.html'));
+
 });
+
+
+
+
+
+
+
 
 
 
