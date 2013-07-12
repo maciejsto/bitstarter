@@ -1,6 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-var filename = '/home/ubuntu/myrepo/bitstarter/web.js';
+var filename = '/home/ubuntu/myrepo/bitstarter/index.html';
 
 var app = express.createServer(express.logger());
 var readFile = function(file) {
@@ -26,7 +26,6 @@ app.get('/', function(request, response) {
  
   response.send(str);
 });
-
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
