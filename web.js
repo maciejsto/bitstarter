@@ -15,16 +15,16 @@ var readFile = function(file) {
 };
 
 app.get('/', function(request, response) {
- var buflen = readFile(filename);
-  var lennn = buflen.length;
-  var buffer = new Buffer(lenn);
-  var str = buffer.toString('utf-8');
+ //var buflen = readFile(filename);
+  //var lennn = buflen.length;
+  //var buffer = new Buffer(lenn);
+  //var str = buffer.toString('utf-8');
   //TODO 
-  console.log(str);
+  //console.log(str);
 
 
  
-  response.send(str);
+  response.send('sssss');
 });
 
 var port = process.env.PORT || 5000;
