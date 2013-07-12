@@ -23,7 +23,7 @@ app.get('/', function(request, response) {
   //console.log(str);
 var buf = fs.readFileSync('./index.html','utf8');
     response.send(buf.toString('utf8',0,buf.length));
- });
+ 
 
  
   //response.send('sssss');
@@ -32,7 +32,7 @@ var buf = fs.readFileSync('./index.html','utf8');
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
-    console.log(readFile(filename));
+   // console.log(readFile(filename));
 
 });
 
