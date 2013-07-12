@@ -1,18 +1,18 @@
 var express = require('express');
 var fs = require('fs');
-var filename = '/home/ubuntu/myrepo/bitstarter/index.html';
+//var filename = '/home/ubuntu/myrepo/bitstarter/index.html';
 
 var app = express.createServer(express.logger());
-var readFile = function(file) {
-    var d;
-    fs.readFileSync(file, function(err, data){
-	if (err) throw err;
-	var d = data;
-    });
-    console.log(data);
-   return d;
+//var readFile = function(file) {
+//    var d;
+ //   fs.readFileSync(file, function(err, data){
+//	if (err) throw err;
+//	var d = data;
+//    });
+    //console.log(data);
+  // return d;
     
-};
+//};
 
 app.get('/', function(request, response) {
  //var buflen = readFile(filename);
@@ -21,10 +21,12 @@ app.get('/', function(request, response) {
   //var str = buffer.toString('utf-8');
   //TODO 
   //console.log(str);
-
+var buf = fs.readFileSync('./index.html','utf8');
+    response.send(buf.toString('utf8',0,buf.length));
+ });
 
  
-  response.send('sssss');
+  //response.send('sssss');
 });
 
 var port = process.env.PORT || 5000;
