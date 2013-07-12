@@ -1,6 +1,6 @@
 var express = require('express');
 var fs = require('fs');
-var = filename = __dirname + '/index.html';
+var = filename = '/home/ubuntu/myrepo/bitstarter/web.js';
 
 var app = express.createServer(express.logger());
 var readFile = function(file) {
