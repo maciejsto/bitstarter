@@ -1,5 +1,6 @@
 var express = require('express');
 var fs = require('fs');
+var = filename = __dirname + '/index.html';
 
 var app = express.createServer(express.logger());
 var readFile = function(file) {
@@ -8,13 +9,13 @@ var readFile = function(file) {
 	if (err) throw err;
 	var d = data;
     });
-    console.log(d);
-    return d;
+    console.log(data);
+   return d;
     
 };
 
 app.get('/', function(request, response) {
- var buflen = readFile('/bitstarter/index.html');
+ var buflen = readFile(filename);
   var lennn = buflen.length;
   var buffer = new Buffer(lenn);
   var str = buffer.toString('utf-8');
@@ -30,9 +31,10 @@ app.get('/', function(request, response) {
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
-    console.log(readFile('~/index.html'));
+    console.log(readFile(filename);
 
 });
+
 
 
 
